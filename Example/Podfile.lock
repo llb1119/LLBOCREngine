@@ -1,0 +1,35 @@
+PODS:
+  - FBSnapshotTestCase (2.1.1):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
+  - FBSnapshotTestCase/Core (2.1.1)
+  - FBSnapshotTestCase/SwiftSupport (2.1.1):
+    - FBSnapshotTestCase/Core
+  - LLBOCREngine (0.1.0)
+  - Nimble (3.2.0)
+  - Nimble-Snapshots (4.1.0):
+    - FBSnapshotTestCase (~> 2.0)
+    - Nimble
+    - Quick
+  - Quick (0.9.2)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - LLBOCREngine (from `../`)
+  - Nimble (~> 3.0)
+  - Nimble-Snapshots
+  - Quick (~> 0.8)
+
+EXTERNAL SOURCES:
+  LLBOCREngine:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
+  LLBOCREngine: ae93606298113473b5616c3431fe4604c1a51b64
+  Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
+  Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
+
+PODFILE CHECKSUM: 4885a85b40682e86b58f21d4f0d622df5179d65e
+
+COCOAPODS: 1.0.0

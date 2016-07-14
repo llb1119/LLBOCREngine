@@ -1,0 +1,6 @@
+framework module LLBOCREngine {
+  umbrella header "LLBOCREngine-umbrella.h"
+
+  export *
+  module * { export * }
+}
