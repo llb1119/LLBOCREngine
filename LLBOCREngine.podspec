@@ -31,14 +31,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'LLBOCREngine/Classes/**/*'
-  
-  s.resource_bundles = {
-    'LLBOCREngine' => ['LLBOCREngine/Assets/**/*']
-  }
+#s.resources = "LLBOCREngine/Assets/**/*"
+#s.resource_bundles = {
+#  'LLBOCREngine' => ['LLBOCREngine/Assets/*']
+#}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'CoreImage'
-  s.libraries = 'libstdc++.6.0.9'
+  s.libraries = 'stdc++.6.0.9'
   #s.dependency 'OpenCV'
   #s.dependency 'TesseractOCRiOS', '4.0.0'
 end
