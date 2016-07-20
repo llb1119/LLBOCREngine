@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+import LLBOCREngine
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let path = NSBundle(forClass: LLBOCREngine.MyClass)
+        print("framework path is \(path)")
     }
 
     override func didReceiveMemoryWarning() {

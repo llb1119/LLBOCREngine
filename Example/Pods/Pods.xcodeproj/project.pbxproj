@@ -128,6 +128,7 @@
 		D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = B28003917869A306C9497FB3139B5550 /* UIImage+Snapshot.m */; };
 		D6C4452AE01D7221E41E70ACE067DCD8 /* LLBOCREngine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 233E989506FEDAC62A99372265FFB12C /* LLBOCREngine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCA54337E8687685A293CC24A97F936C /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FB3F77E4C4F8A60BD0821D35D19C7 /* Contain.swift */; };
+		DE9AA3FC1D3F8860007CF867 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DE9AA3FB1D3F8860007CF867 /* tessdata */; };
 		DF0216DBDE0084F6C87FE9275A4E9F0D /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F65877051A80854B8307C51E5BF152 /* Nimble-dummy.m */; };
 		E3B1EAAC82543C09339AE71FE9B31AEC /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 7395C69488EE986713CFCD76E434400B /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E6F6FF9554A6C7EABD6B92B691751DAD /* BeLessThanOrEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712924708985B1EB68BCE0D290D815FC /* BeLessThanOrEqual.swift */; };
@@ -347,6 +348,7 @@
 		DCF330BF6C88C59845888329E76AF044 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
 		DE300E3EAEB55D242BB905111CE02C5A /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
 		DE8B13765C71898B757597DF5D55D3F3 /* Pods-LLBOCREngine_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LLBOCREngine_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DE9AA3FB1D3F8860007CF867 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = LLBOCREngine/Tesseract/tessdata; sourceTree = "<group>"; };
 		E0CB59E222B52B1A8991F62947171AD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E256A5508DD1B044CC082BA562C95299 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		E456588A7D5D494914B25F6F2C50662A /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
@@ -686,6 +688,7 @@
 		AF7838661C5FD952D4CA2CAB2E7F38B4 /* LLBOCREngine */ = {
 			isa = PBXGroup;
 			children = (
+				DE9AA3F81D3F87C7007CF867 /* Resources */,
 				83F2FDBB55C00D3D7B7252996A8CCC55 /* LLBOCREngine */,
 				E1E40FDEE03D7D03A93052CF2F31708F /* Support Files */,
 			);
@@ -760,6 +763,14 @@
 				CFE79F641D37595000D369F0 /* UIImage+OpenCV.mm */,
 			);
 			path = ImagePreprocessing;
+			sourceTree = "<group>";
+		};
+		DE9AA3F81D3F87C7007CF867 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE9AA3FB1D3F8860007CF867 /* tessdata */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E1E40FDEE03D7D03A93052CF2F31708F /* Support Files */ = {
@@ -951,6 +962,7 @@
 				A23CCF92311723A827F7016FF3458BF8 /* Sources */,
 				5FC0114DDF7C31EBD31FD4650BA95FD3 /* Frameworks */,
 				AAED6471302E48CA95A657AC42EB5A6F /* Headers */,
+				DE9AA3FA1D3F8853007CF867 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -1067,6 +1079,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE9AA3FA1D3F8853007CF867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE9AA3FC1D3F8860007CF867 /* tessdata in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D7A315C6C7BAF9D1209E1D5E006AC0E /* Sources */ = {
