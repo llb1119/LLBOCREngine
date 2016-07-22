@@ -18,7 +18,6 @@
 		130F048002A62769FAFCC66F2C79391A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = CE16A61DE504E60CA22D58C451BB9522 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1330782A55555085FE8872AF7BA8DD48 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311C620023A9445DE68F2582C13839E5 /* DSL.swift */; };
 		135B6326D35C977854AA0C12B3F6CB7D /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7116E4797A8F559FBCC350C433EB2AB /* DSL.swift */; };
-		13A4B44F8DB298E1293F4959F8F557AB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256A5508DD1B044CC082BA562C95299 /* ReplaceMe.swift */; };
 		13CC849FA70CADF802470B6A90DCDF79 /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425293E77484F37F2F26FA98CECCAB9F /* AllPass.swift */; };
 		1C696A0CCC5C29FFBBB8620F5DC8FA6D /* Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CA51A537B8A1D62516D4D49038B2EA /* Example.swift */; };
 		1ED8C77E9422C66BBF56E6C10D5826F0 /* NMBExceptionCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF330BF6C88C59845888329E76AF044 /* NMBExceptionCapture.m */; };
@@ -128,6 +127,9 @@
 		D5C30BC656C11AF60394E3180A217BB1 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = B28003917869A306C9497FB3139B5550 /* UIImage+Snapshot.m */; };
 		D6C4452AE01D7221E41E70ACE067DCD8 /* LLBOCREngine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 233E989506FEDAC62A99372265FFB12C /* LLBOCREngine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DCA54337E8687685A293CC24A97F936C /* Contain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168FB3F77E4C4F8A60BD0821D35D19C7 /* Contain.swift */; };
+		DE01141F1D42186200C05D9D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01141C1D42186200C05D9D /* Error.swift */; };
+		DE0114201D42186200C05D9D /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01141D1D42186200C05D9D /* Language.swift */; };
+		DE0114211D42186200C05D9D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01141E1D42186200C05D9D /* Manager.swift */; };
 		DE9AA3FC1D3F8860007CF867 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = DE9AA3FB1D3F8860007CF867 /* tessdata */; };
 		DF0216DBDE0084F6C87FE9275A4E9F0D /* Nimble-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F65877051A80854B8307C51E5BF152 /* Nimble-dummy.m */; };
 		E3B1EAAC82543C09339AE71FE9B31AEC /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 7395C69488EE986713CFCD76E434400B /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -329,7 +331,6 @@
 		CE16A61DE504E60CA22D58C451BB9522 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		CFD544021D3777180026DC36 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../../LLBOCREngine/OpenCV/opencv2.framework; sourceTree = "<group>"; };
 		CFD544041D3777310026DC36 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = ../../LLBOCREngine/Tesseract/TesseractOCR.framework; sourceTree = "<group>"; };
-		CFD544081D377E0C0026DC36 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		CFE79F461D3750CA00D369F0 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/usr/lib/libstdc++.6.0.9.tbd"; sourceTree = DEVELOPER_DIR; };
 		CFE79F481D3750D200D369F0 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
 		CFE79F611D37595000D369F0 /* UIImage+Preprocessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+Preprocessing.mm"; sourceTree = "<group>"; };
@@ -346,11 +347,13 @@
 		D994B4D3BA540103383263CD192B52D9 /* BeCloseTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeCloseTo.swift; path = Sources/Nimble/Matchers/BeCloseTo.swift; sourceTree = "<group>"; };
 		DAD73863B384083727F1E1F1433B8FEF /* Callsite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Callsite.swift; path = Sources/Quick/Callsite.swift; sourceTree = "<group>"; };
 		DCF330BF6C88C59845888329E76AF044 /* NMBExceptionCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NMBExceptionCapture.m; path = Sources/Nimble/objc/NMBExceptionCapture.m; sourceTree = "<group>"; };
+		DE01141C1D42186200C05D9D /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		DE01141D1D42186200C05D9D /* Language.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		DE01141E1D42186200C05D9D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		DE300E3EAEB55D242BB905111CE02C5A /* MatcherFunc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherFunc.swift; path = Sources/Nimble/Wrappers/MatcherFunc.swift; sourceTree = "<group>"; };
 		DE8B13765C71898B757597DF5D55D3F3 /* Pods-LLBOCREngine_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LLBOCREngine_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DE9AA3FB1D3F8860007CF867 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = LLBOCREngine/Tesseract/tessdata; sourceTree = "<group>"; };
 		E0CB59E222B52B1A8991F62947171AD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E256A5508DD1B044CC082BA562C95299 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		E456588A7D5D494914B25F6F2C50662A /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
 		E49C95F056009CC789247F71C33EB79A /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		E6015044230FFD0F7A4F16DFBDC93317 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
@@ -482,14 +485,6 @@
 			);
 			name = "Pods-LLBOCREngine_Example";
 			path = "Target Support Files/Pods-LLBOCREngine_Example";
-			sourceTree = "<group>";
-		};
-		0FB425C97C61C9FAF88530A3446DB2EE /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				E256A5508DD1B044CC082BA562C95299 /* ReplaceMe.swift */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		10786C518A0CC4EEE04A77BB6B787E91 /* Support Files */ = {
@@ -627,8 +622,10 @@
 		83F2FDBB55C00D3D7B7252996A8CCC55 /* LLBOCREngine */ = {
 			isa = PBXGroup;
 			children = (
+				DE01141C1D42186200C05D9D /* Error.swift */,
+				DE01141D1D42186200C05D9D /* Language.swift */,
+				DE01141E1D42186200C05D9D /* Manager.swift */,
 				CFE79F4A1D3753A300D369F0 /* ImagePreprocessing */,
-				0FB425C97C61C9FAF88530A3446DB2EE /* Classes */,
 			);
 			path = LLBOCREngine;
 			sourceTree = "<group>";
@@ -746,14 +743,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		CFD544061D377DCB0026DC36 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				CFD544081D377E0C0026DC36 /* tessdata */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		CFE79F4A1D3753A300D369F0 /* ImagePreprocessing */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,7 +765,6 @@
 		E1E40FDEE03D7D03A93052CF2F31708F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CFD544061D377DCB0026DC36 /* Assets */,
 				34972F0C38E9B49ED4138FD78DBB27A1 /* Info.plist */,
 				5951393BF8E079885474F0883C869DA1 /* LLBOCREngine.modulemap */,
 				E9FB415597C43B24BB23605757CF23E5 /* LLBOCREngine.xcconfig */,
@@ -1174,10 +1162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE01141F1D42186200C05D9D /* Error.swift in Sources */,
+				DE0114211D42186200C05D9D /* Manager.swift in Sources */,
+				DE0114201D42186200C05D9D /* Language.swift in Sources */,
 				CFE79F681D37595000D369F0 /* UIImage+OpenCV.mm in Sources */,
 				B9C3D7BE72274A0E8F9378C24DF1BCCD /* LLBOCREngine-dummy.m in Sources */,
 				CFE79F651D37595000D369F0 /* UIImage+Preprocessing.mm in Sources */,
-				13A4B44F8DB298E1293F4959F8F557AB /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1291,6 +1281,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1615,6 +1606,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
